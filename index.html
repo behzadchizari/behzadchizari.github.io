@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=https://www.linkedin.com/in/behzad-chizari-53738ab5"/>
+    <!--<meta http-equiv="refresh" content="0; url=https://www.linkedin.com/in/behzad-chizari-53738ab5"/>-->
     <meta name="theme-color" content="#306a9c" />
     <title>Behzad Chizari Personal Webpage</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -17,14 +17,33 @@
             margin: 0px;
             padding: 0px;
         }
+
+        .header {
+            width: 100%;
+            min-height: 300px;
+            background: #306a9c;
+            position: relative;
+        }
+
+            .header img[src*='Personal.jpg'] {
+                border: 2px solid #3c3c3c;
+                position: absolute;
+                top: 105px;
+                right: 40%;
+            }
     </style>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/rtl-bootstrap.js"></script>
+
 </head>
 <body>
-    <div class="container text-center">
-        <a href="https://www.linkedin.com/in/behzad-chizari-53738ab5">
-            <img src="img/loading.gif" class="img-responsive center-block" style="margin-top:30px" />
-        </a>
+    <div class="header">
+        <img src="img/Personal.jpg" class="img-responsive img-circle center-block" width="350"/>
     </div>
+    <div class="container">
+
+    </div>
+
 </body>
 </html>
-
