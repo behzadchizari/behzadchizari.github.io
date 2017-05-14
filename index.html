@@ -7,6 +7,7 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="img/fav.png" />
     <!--<meta http-equiv="refresh" content="0; url=https://www.linkedin.com/in/behzad-chizari-53738ab5"/>-->
     <meta name="theme-color" content="#306a9c" />
     <title>Behzad Chizari Personal Webpage</title>
@@ -41,7 +42,6 @@
             <i class="">C#.Net&nbsp;:&nbsp;</i>
             <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                    <span class="sr-only">60% Complete</span>
                 </div>
             </div>
 
@@ -50,22 +50,44 @@
             <i class="">C++&nbsp;:&nbsp;</i>
             <div class="clearfix"></div>
             <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                    <span class="sr-only">60% Complete</span>
+                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                 </div>
             </div>
             <!--*************************-->
 
             <i class="">Javascript&nbsp;:&nbsp;</i>
             <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                    <span class="sr-only">60% Complete</span>
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                 </div>
             </div>
-            <!--*************************-->
+            <!--***************************************************************************-->
         </div>
         <div class="col-lg-6 col-md-6 col-xs-12">
-            <h3 class="section-title-lev2">Programming</h3>
+            <h3 class="section-title-lev2">Design :</h3>
+            <!--*************************-->
+
+            <i class="">Photoshop&nbsp;:&nbsp;</i>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                </div>
+            </div>
+
+            <!--*************************-->
+
+            <i class="">HTML&nbsp;:&nbsp;</i>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                </div>
+            </div>
+
+            <!--*************************-->
+            <i class="">CSS&nbsp;:&nbsp;</i>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                </div>
+            </div>
+
+            <!--*************************-->
 
         </div>
     </div>
@@ -79,6 +101,7 @@
                 $(progressbars[i]).animate({
                     'width': ariaValuenow + '%'
                 }, 2000);
+                console.log($(progressbars[i]).attr('aria-valuenow'));
             }
             return;
         }
