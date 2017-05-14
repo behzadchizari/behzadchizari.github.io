@@ -18,26 +18,40 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/rtl-bootstrap.js"></script>
+    <script src="js/animatescroll.min.js"></script>
+    <script src="js/animatescroll.noeasing.js"></script>
 </head>
 <body>
-<div class="header">
-    <img src="img/Personal.jpg" class="img-responsive img-circle center-block" width="350" />
-</div>
-<div class="sub-header">
-    <div class="container">
-        <img src="img/arrow-down.gif" class="img-responsive center-block"/>
+    <div class="header">
+        <img src="img/Personal.jpg" class="img-responsive img-circle center-block" width="350" />
     </div>
-</div>
-    <div class="container">
+    <div class="sub-header">
+        <div class="container">
+            <img src="img/arrow-down.gif" class="img-responsive center-block" />
+        </div>
+    </div>
+    <div class="container" id="cont" style="height: 1000px;">
 
     </div>
-<script>
-    $(document).ready(function() {
-        var totalHeight = screen.height;
-        var headerHeight = parseInt($('.header').css('height'),10);
-        var subHeaderHeight = Number(totalHeight) - Number(headerHeight);
-        $('.sub-header').css('height', subHeaderHeight + 'px');
-    });
-</script>
+    <script>
+        $(document).ready(function () {
+            var totalHeight = screen.height;
+            var headerHeight = parseInt($('.header').css('height'), 10);
+            var subHeaderHeight = Number(totalHeight) - Number(headerHeight);
+            $('.sub-header').css('height', subHeaderHeight + 'px');
+        });
+
+        $('.sub-header img[src*="arrow-down.gif"]').click(function () {
+            //$(window).scrollTop(Number(screen.height), 2000, { easing: 'easeInSine' });
+
+            //$('html, body').animate({
+            //    scrollTop: top
+            //}, 500, 'easeInSine');
+
+            //$('html,body').animate({ scrollTop: Number(screen.height) }, 800, 'easeInSine');
+
+            $('#cont').animatescroll({ scrollSpeed: 1000, easing: 'easeOutCirc' });
+        });
+    </script>
 </body>
 </html>
