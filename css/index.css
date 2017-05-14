@@ -19,25 +19,19 @@
         background: #3c3c3c;
     }
     .sub-header img[src*='arrow-down.gif'] {
-        cursor: pointer;
-        margin-right: 0px !important;
-        margin-left: 0px !important;
-        padding: 0px;
         margin-top: 70px;
+        cursor: pointer;
     }
 
 /* XSmall devices (tablets, 768px and up) */
 @media screen and (max-width: 768px) {
     .header {
-        height: 350px;
+        height: 250px;
     }
         .header img[src*='Personal.jpg'] {
             width: 250px;
-            top: 220px;
+            top: 120px;
         }
-            .sub-header img[src*='arrow-down.gif'] {
-                width: 200px;
-            }
 }
 
 /* Small devices (desktops, 992px and up) */
