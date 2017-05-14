@@ -2,9 +2,19 @@
     font-family: AbcCursiveArrow;
     src: url('../fonts/ABCCA__.TTF') format('truetype');
 }
+
 @font-face {
     font-family: AbcDNManuscript;
     src: url('../fonts/ABCDN__.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: AbcPrintArrow;
+    src: url('../fonts/ABCPA__.TTF') format('truetype');
+}
+@font-face {
+    font-family: AbcPrintDottedArrow;
+    src: url('../fonts/ABCPAD_.TTF') format('truetype');
 }
 * {
     margin: 0px;
@@ -46,9 +56,23 @@
     .sub-header img[src*='arrow-down.gif'] {
         cursor: pointer;
         width: 150px;
-        margin-top:160px;
+        margin-top: 160px;
     }
 
+.section-title {
+    font-family: AbcPrintArrow;
+    font-weight: bolder;
+}
+.section-title-lev2{
+    font-family: AbcDNManuscript;
+
+}
+
+#section-1{
+    padding-top:100px;
+    opacity:0;
+}
+/****************************************************************************************/
 /* XSmall devices (tablets, 768px and up) */
 @media screen and (max-width: 768px) {
     .header {
