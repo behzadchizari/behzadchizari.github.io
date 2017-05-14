@@ -11,13 +11,11 @@
     <meta name="theme-color" content="#306a9c" />
     <title>Behzad Chizari Personal Webpage</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/rtl-bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap-theme.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/rtl-bootstrap.js"></script>
+    <!--<script src="js/rtl-bootstrap.js"></script>-->
     <script src="js/animatescroll.min.js"></script>
     <script src="js/animatescroll.noeasing.js"></script>
 </head>
@@ -34,27 +32,86 @@
             <img src="img/arrow-down.gif" class="img-responsive center-block" />
         </div>
     </div>
-    <div class="container" id="cont" style="height: 1000px;">
+    <div class="container" id="section-1" style="height: 1000px;">
+        <h1 class="section-title">Skills</h1>
+        <div class="col-lg-6 col-md-6 col-xs-12">
+            <h3 class="section-title-lev2">Programming :</h3>
+            <!--*************************-->
 
+            <i class="">C#.Net&nbsp;:&nbsp;</i>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+
+            <!--*************************-->
+
+            <i class="">C++&nbsp;:&nbsp;</i>
+            <div class="clearfix"></div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+            <!--*************************-->
+
+            <i class="">Javascript&nbsp;:&nbsp;</i>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+            <!--*************************-->
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-12">
+            <h3 class="section-title-lev2">Programming</h3>
+
+        </div>
     </div>
     <script>
+
+        //*******************************************************
+
+        function loadProgressBar(progressbars) {
+            for (var i = 0; i < progressbars.length; i++) {
+                var ariaValuenow = $(progressbars[i]).attr('aria-valuenow');
+                $(progressbars[i]).animate({
+                    'width': ariaValuenow + '%'
+                }, 2000);
+            }
+            return;
+        }
+
+        var isProgressBarsloaded = false;
+        //*******************************************************
+
         $(document).ready(function () {
             var totalHeight = screen.height;
             var headerHeight = parseInt($('.header').css('height'), 10);
             var subHeaderHeight = Number(totalHeight) - Number(headerHeight);
             $('.sub-header').css('height', subHeaderHeight + 'px');
         });
+        //*******************************************************
+        $(window).scroll(function () {
+            //alert(Number($('#section-1').offset().top) - Number(screen.height) / 2);
+            if (!isProgressBarsloaded) {
+                if ($(window).scrollTop() >= Number($('#section-1').offset().top) - Number(screen.height) / 2) {
+                    $("#section-1").animate({
+                        'padding-top': '0px',
+                        'opacity': '1'
+                    }, 2000);
 
+
+                    var progressbars = document.getElementsByClassName('progress-bar');
+                    loadProgressBar(progressbars);
+                    isProgressBarsloaded = true;
+                }
+            }
+        })
+        //*******************************************************
         $('.sub-header img[src*="arrow-down.gif"]').click(function () {
-            //$(window).scrollTop(Number(screen.height), 2000, { easing: 'easeInSine' });
-
-            //$('html, body').animate({
-            //    scrollTop: top
-            //}, 500, 'easeInSine');
-
-            //$('html,body').animate({ scrollTop: Number(screen.height) }, 800, 'easeInSine');
-
-            $('#cont').animatescroll({ scrollSpeed: 1000, easing: 'easeOutCirc' });
+            $('#section-1').animatescroll({ scrollSpeed: 1000, easing: 'easeOutCirc' });
         });
     </script>
 </body>
