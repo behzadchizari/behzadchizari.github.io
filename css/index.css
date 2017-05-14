@@ -21,7 +21,7 @@
                 min-height: 250px;
             }
             .header img[src*='Personal.jpg'] {
-                width:150px ;
+                width:250px ;
                 top: 175px;
             }
         }
