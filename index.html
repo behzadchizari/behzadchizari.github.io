@@ -20,12 +20,24 @@
     <script src="js/rtl-bootstrap.js"></script>
 </head>
 <body>
-    <div class="header">
-        <img src="img/Personal.jpg" class="img-responsive img-circle center-block" width="350" />
+<div class="header">
+    <img src="img/Personal.jpg" class="img-responsive img-circle center-block" width="350" />
+</div>
+<div class="sub-header">
+    <div class="container">
+        <img src="img/arrow-down.gif" class="img-responsive center-block"/>
     </div>
+</div>
     <div class="container">
 
     </div>
-
+<script>
+    $(document).ready(function() {
+        var totalHeight = screen.height;
+        var headerHeight = parseInt($('.header').css('height'),10);
+        var subHeaderHeight = Number(totalHeight) - Number(headerHeight);
+        $('.sub-header').css('height', subHeaderHeight + 'px');
+    });
+</script>
 </body>
 </html>
