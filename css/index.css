@@ -16,9 +16,16 @@
     font-family: AbcPrintDottedArrow;
     src: url('../fonts/ABCPAD_.TTF') format('truetype');
 }
+@font-face {
+    font-family: gorbeh;
+    src: url('../fonts/Gorbeh-Regular.eot') format('embedded-opentype'), url('../fonts/Gorbeh-Regular.ttf') format('truetype'), url('../fonts/Gorbeh-Regular.woff') format('woff');
+}
 * {
     margin: 0px;
     padding: 0px;
+}
+.gb{
+    font-family: gorbeh;
 }
 ul li{
     list-style:none;
@@ -87,6 +94,10 @@ body{
     padding-top:100px;
     opacity:0;
 }
+#section-4{
+    padding-top:100px;
+    opacity:0;
+}
 
 .gotop{
     cursor:pointer;
@@ -94,11 +105,20 @@ body{
     height:60px;
     position:fixed;
     bottom:30px;
-    left:20px;
+    right:20px;
     background:#306a9c;
     border-radius:50%;
     /*opacity:0;*/
     border:2px solid #5c9dd5;
+    z-index:999;
+    text-align:center;
+    color:white;
+    font-size:35px;
+}
+.gotop span{
+    position:absolute;
+    top:3px;
+    left:12px;
 }
 /****************************************************************************************/
 /* XSmall devices (tablets, 768px and up) */

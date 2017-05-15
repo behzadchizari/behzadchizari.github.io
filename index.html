@@ -23,7 +23,7 @@
 <body>
 
     <div class="gotop gb">
-
+        <span>&#xe316;</span>
     </div>
     <div class="header">
         <h3 style="margin:0px;" class="text-center ">Behzad Chizari</h3>
@@ -164,12 +164,37 @@
             <ul class="col-lg-3"></ul>
         </div>
     </div>
-    <div class="container" id="section-2" style="height:auto;">
+    <div class="container" id="section-2">
+        <h1 class="section-title">Education</h1>
+        <div class="media">
+            <div class="media-left">
+                <a href="sanatisharif.ir">
+                    <img class="media-object" src="img/sharif.gif" alt="" width="55">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Sharif University of Technology's High School</h4>
+                <small>2011 - 2015</small>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <a href="sanatisharif.ir">
+                    <img class="media-object" src="img/azad-logo.png" alt="" width="55">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Islamic Azad University Central Tehran Branch</h4>
+                <small>2015</small>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="section-3" style="height:auto;">
         <h1 class="section-title">Experiences</h1>
         <div class="media">
             <div class="media-left">
-                <a href="#">
-                    <img class="media-object" src="img/fav.png" alt="" width="60">
+                <a href="http://www.iraninfotech.com/">
+                    <img class="media-object img-circle" src="img/IIDLogo.png" alt="" width="60">
                 </a>
             </div>
             <div class="media-body">
@@ -180,7 +205,7 @@
         </div>
         <div class="media">
             <div class="media-left">
-                <a href="#">
+                <a href="iauctb.github.io">
                     <img class="media-object" src="img/cactb.png" alt="" width="60">
                 </a>
             </div>
@@ -192,8 +217,8 @@
         </div>
         <div class="media">
             <div class="media-left">
-                <a href="#">
-                    <img class="media-object" src="img/fav.png" alt="" width="60">
+                <a href="http://www.faranam.net/">
+                    <img class="media-object img-circle " src="img/faranam-logo.jpg" alt="" width="55" height="55">
                 </a>
             </div>
             <div class="media-body">
@@ -203,83 +228,110 @@
             </div>
         </div>
     </div>
-    <div class="container" id="section-3" style="height:1000px;">
+    <div class="container" id="section-4">
         <h1 class="section-title">Art</h1>
+        <div class="media">
+            <div class="media-left">
+                <a>
+                    <img class="media-object" src="img/piano.png" alt="" width="55">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Piano</h4>
+                <small>Since 2008</small>
+            </div>
+        </div>
     </div>
-    <script>
+    <div class="container" id="section-5" style="height:500px;">
+        <h1 class="section-title">Follow Me</h1>
 
-        //*******************************************************
+    </div>
+        <script>
 
-        function loadProgressBar(progressbars) {
-            for (var i = 0; i < progressbars.length; i++) {
-                var ariaValuenow = $(progressbars[i]).attr('aria-valuenow');
-                $(progressbars[i]).animate({
-                    'width': ariaValuenow + '%'
-                }, 2000);
-                console.log($(progressbars[i]).attr('aria-valuenow'));
+            //*******************************************************
+
+            function loadProgressBar(progressbars) {
+                for (var i = 0; i < progressbars.length; i++) {
+                    var ariaValuenow = $(progressbars[i]).attr('aria-valuenow');
+                    $(progressbars[i]).animate({
+                        'width': ariaValuenow + '%'
+                    }, 2000);
+                    console.log($(progressbars[i]).attr('aria-valuenow'));
+                }
+                return;
             }
-            return;
-        }
 
-        var isProgressBarsloaded = false;
-        var isExploaded = false;
-        var isArtloaded = false;
-        //*******************************************************
+            var isProgressBarsloaded = false;
+            var isExploaded = false;
+            var isArtloaded = false;
+            var isEduloaded = false;
+            //*******************************************************
 
-        $(document).ready(function () {
-            $('.sub-header').css('height', Number(screen.height) - parseInt($('.header').css('height'), 10) + 'px');
-            $('html,body').animatescroll();
-            $('.gotop').fadeOut();
-        });
-        //*******************************************************
-        $(window).scroll(function () {
-            //alert(Number($('#section-1').offset().top) - Number(screen.height) / 2);
-
-            if ($(window).scrollTop() <= Number($('#section-1').offset().top - 200) ) {
+            $(document).ready(function () {
+                $('.sub-header').css('height', Number(screen.height) - parseInt($('.header').css('height'), 10) + 'px');
+                $('html,body').animatescroll();
                 $('.gotop').fadeOut();
-            }
-            //alert($('#section-1').offset().top + "." + $(window).scrollTop());
+            });
+            //*******************************************************
+            $(window).scroll(function () {
+                //alert(Number($('#section-1').offset().top) - Number(screen.height) / 2);
 
-            else {
-                $('.gotop').fadeIn();
-            }
-            if (!isProgressBarsloaded) {
-                if ($(window).scrollTop() >= Number($('#section-1').offset().top) - Number(screen.height) / 2) {
-                    $("#section-1").animate({
-                        'padding-top': '0px',
-                        'opacity': '1'
-                    }, 2000);
-                    var progressbars = document.getElementsByClassName('progress-bar');
-                    loadProgressBar(progressbars);
-                    isProgressBarsloaded = true;
+                if ($(window).scrollTop() <= Number($('#section-1').offset().top - 200)) {
+                    $('.gotop').fadeOut();
                 }
-            }
-            if (!isExploaded) {
-                if ($(window).scrollTop() >= Number($('#section-2').offset().top) - Number(screen.height) / 2) {
-                    $("#section-2").animate({
-                        'padding-top': '0px',
-                        'opacity': '1'
-                    }, 2000);
-                }
-            }
-            if (!isArtloaded) {
-                if ($(window).scrollTop() >= Number($('#section-3').offset().top) - Number(screen.height) / 2) {
-                    $("#section-3").animate({
-                        'padding-top': '0px',
-                        'opacity': '1'
-                    }, 2000);
-                }
-            }
-        })
-        //*******************************************************
-        $('.sub-header img[src*="arrow-down.gif"]').click(function () {
-            $('#section-1').animatescroll({ scrollSpeed: 1000, easing: 'easeOutCirc' });
-        });
-        //*******************************************************
-        $('.gotop').click(function () {
-            $('html,body').animatescroll();
+                    //alert($('#section-1').offset().top + "." + $(window).scrollTop());
 
-        });
-    </script>
+                else {
+                    $('.gotop').fadeIn();
+                }
+                if (!isProgressBarsloaded) {
+                    if ($(window).scrollTop() >= Number($('#section-1').offset().top) - Number(screen.height) / 2) {
+                        $("#section-1").animate({
+                            'padding-top': '0px',
+                            'opacity': '1'
+                        }, 2000);
+                        var progressbars = document.getElementsByClassName('progress-bar');
+                        loadProgressBar(progressbars);
+                        isProgressBarsloaded = true;
+                    }
+                }
+                if (!isEduloaded) {
+                    if ($(window).scrollTop() >= Number($('#section-2').offset().top) - Number(screen.height) / 2) {
+                        $("#section-2").animate({
+                            'padding-top': '0px',
+                            'opacity': '1'
+                        }, 2000);
+                    }
+                    //isEduloaded = true;
+                }
+                if (!isExploaded) {
+                    if ($(window).scrollTop() >= Number($('#section-3').offset().top) - Number(screen.height) / 2) {
+                        $("#section-3").animate({
+                            'padding-top': '0px',
+                            'opacity': '1'
+                        }, 2000);
+                    }
+                    //isExploaded = true;
+                }
+                if (!isArtloaded) {
+                    if ($(window).scrollTop() >= Number($('#section-4').offset().top) - Number(screen.height) / 2) {
+                        $("#section-4").animate({
+                            'padding-top': '0px',
+                            'opacity': '1'
+                        }, 2000);
+                    }
+                    //isArtloaded = true;
+                }
+            })
+            //*******************************************************
+            $('.sub-header img[src*="arrow-down.gif"]').click(function () {
+                $('#section-1').animatescroll({ scrollSpeed: 1000, easing: 'easeOutCirc' });
+            });
+            //*******************************************************
+            $('.gotop').click(function () {
+                $('html,body').animatescroll();
+
+            });
+        </script>
 </body>
 </html>
