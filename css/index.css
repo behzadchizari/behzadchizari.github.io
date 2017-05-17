@@ -179,8 +179,12 @@ body {
             background: -o-linear-gradient(-45deg,#833ab4,#833ab4,#e1306c,#fcaf45,#f77737,#fd1d1d,#fd1d1d);
             background: -moz-linear-gradient(-45deg,#833ab4,#833ab4,#e1306c,#fcaf45,#f77737,#fd1d1d,#fd1d1d);
             background: -webkit-linear-gradient(-45deg,#833ab4,#833ab4,#e1306c,#fcaf45,#f77737,#fd1d1d,#fd1d1d);
+            background-clip: text;
+            text-fill-color: transparent;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+	    -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
         }
 
         .social a.gb[href*='telegram']:hover {
