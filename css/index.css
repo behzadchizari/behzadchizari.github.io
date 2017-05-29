@@ -204,6 +204,9 @@ body {
     border: 0px solid transparent !important;
 
 }
+.panel {
+    border: none;
+}
 /****************************************************************************************/
 /* XSmall devices (tablets, 768px and up) */
 @media screen and (max-width: 768px) {
