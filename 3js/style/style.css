@@ -17,10 +17,10 @@ body {
   }
 
   .option-grid tr td:nth-child(1){
-    width: 30%;
+    width: 20%;
 }
 .option-grid tr td:nth-child(2){
-    width: 67%;
+    width: 70%;
 }
 
 input[type = number]{
@@ -34,4 +34,17 @@ input[type = number]{
     border-bottom: 2px solid rgb(209, 209, 209);
     padding-bottom: 20px;
     color: rgb(78, 78, 78)
+}
+
+@media screen and (max-width: 767.98px){
+  .option {
+    width: 100%;
+    float: left;
+    padding: 5px;
+  }
+  .canvas {
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
 }
